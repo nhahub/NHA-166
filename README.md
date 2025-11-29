@@ -1,0 +1,150 @@
+<h1 align="center">🏥 IoT Healthcare Data Pipeline</h1>
+
+<p align="center">
+  <strong>A Real-Time IoT Medical Monitoring & Data Engineering Pipeline</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/IoT-Healthcare-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Apache-Kafka-black?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Spark-Streaming-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-316192?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge">
+</p>
+
+---
+
+## 🔍 Overview  
+This project delivers a complete real-time IoT healthcare monitoring pipeline capable of simulating patient vital signs, streaming them through Kafka, processing anomalies with Spark Streaming, storing structured data in PostgreSQL, and visualizing everything live using a Streamlit dashboard.
+
+It is a **full, scalable, fault-tolerant data engineering system** suitable for medical research, education, and real-world prototyping.
+
+---
+
+## 🎥 Demo Video  
+👉 **[Click to Watch the Demo](https://drive.google.com/file/d/1ERCLwLHwSd4mKA6Pgb2VXUpPFr3wXkuY/view?usp=sharing)**
+
+---
+
+## 🖼 System Screenshots  
+> ضع جميع الصور داخل مجلد: `images/`  
+> بنفس هذه الأسماء:  
+> kafka.png – postgres.png – streamlit1.png – streamlit2.png
+
+| Description | Screenshot |
+|------------|------------|
+| **Kafka Live Stream** | ![](images/kafka.png) |
+| **PostgreSQL Database** | ![](images/postgres.png) |
+| **Streamlit Dashboard – Main View** | ![](images/streamlit1.png) |
+| **Streamlit Dashboard – Alerts View** | ![](images/streamlit2.png) |
+
+---
+
+## 🚀 Features  
+✔ Real-time IoT vitals simulation  
+✔ High-throughput Kafka streaming  
+✔ Spark Structured Streaming anomaly detection  
+✔ PostgreSQL for long-term time-series storage  
+✔ Live dashboard for vitals, alerts, and summaries  
+✔ Modular, scalable, fault-tolerant architecture  
+✔ Fully documented and ready for real deployment  
+
+---
+
+
+## 🧰 Technologies Used  
+
+| Layer | Technology |
+|-------|------------|
+| Data Simulation | Python |
+| Streaming Pipeline | Apache Kafka |
+| Real-Time Analytics | Apache Spark (Structured Streaming) |
+| Storage | PostgreSQL |
+| Dashboard | Streamlit |
+
+---
+
+## 🏗 How to Run the Project  
+
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/USERNAME/REPO.git
+cd REPO
+```
+
+---
+
+### 2️⃣ Start Kafka Services  
+```bash
+zookeeper-server-start.sh config/zookeeper.properties
+kafka-server-start.sh config/server.properties
+```
+
+Create topic:  
+```bash
+kafka-topics.sh --create --topic patient_vitals_stream --bootstrap-server localhost:9092
+```
+
+---
+
+### 3️⃣ Run the Data Simulator  
+```bash
+python data_simulation.py
+```
+
+---
+
+### 4️⃣ Run Spark Streaming Job  
+```bash
+spark-submit spark_processing.py
+```
+
+---
+
+### 5️⃣ Configure PostgreSQL  
+Ensure the following tables exist:  
+- Doctors  
+- Patients  
+- Devices  
+- Vitals  
+- Alerts_Log  
+- Patient_Summary  
+
+---
+
+### 6️⃣ Launch the Streamlit Dashboard  
+```bash
+streamlit run dashboard.py
+```
+
+---
+
+## 📊 Database Schema (Simplified)  
+```
+Doctors (1) ───< Patients (∞)
+Patients (1) ───< Vitals (∞)
+Patients (1) ───< Alerts_Log (∞)
+Devices (1) ───< Vitals (∞)
+```
+
+---
+
+## 🔮 Future Enhancements  
+- Add real IoT medical devices  
+- ML-powered anomaly detection  
+- Cloud deployment (AWS – GCP – Azure)  
+- Predictive analytics & early warning system  
+
+---
+
+## 👥 Team  
+- Rawda Abokhalil  
+- Youssef Ahmed  
+- Ahmed Youssef  
+- **Belal Ahmed**  
+**Supervisor:** Eng. Mohamed Hamed
+
+---
+
+## 📬 Contact  
+📧 be1a1a7med22@gmail.com
