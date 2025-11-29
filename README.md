@@ -27,9 +27,6 @@ It is a **full, scalable, fault-tolerant data engineering system** suitable for 
 ---
 
 ## 🖼 System Screenshots  
-> ضع جميع الصور داخل مجلد: `images/`  
-> بنفس هذه الأسماء:  
-> kafka.png – postgres.png – streamlit1.png – streamlit2.png
 
 | Description | Screenshot |
 |------------|------------|
@@ -64,60 +61,6 @@ It is a **full, scalable, fault-tolerant data engineering system** suitable for 
 
 ---
 
-## 🏗 How to Run the Project  
-
-### 1️⃣ Clone the Repository  
-```bash
-git clone https://github.com/USERNAME/REPO.git
-cd REPO
-```
-
----
-
-### 2️⃣ Start Kafka Services  
-```bash
-zookeeper-server-start.sh config/zookeeper.properties
-kafka-server-start.sh config/server.properties
-```
-
-Create topic:  
-```bash
-kafka-topics.sh --create --topic patient_vitals_stream --bootstrap-server localhost:9092
-```
-
----
-
-### 3️⃣ Run the Data Simulator  
-```bash
-python data_simulation.py
-```
-
----
-
-### 4️⃣ Run Spark Streaming Job  
-```bash
-spark-submit spark_processing.py
-```
-
----
-
-### 5️⃣ Configure PostgreSQL  
-Ensure the following tables exist:  
-- Doctors  
-- Patients  
-- Devices  
-- Vitals  
-- Alerts_Log  
-- Patient_Summary  
-
----
-
-### 6️⃣ Launch the Streamlit Dashboard  
-```bash
-streamlit run dashboard.py
-```
-
----
 
 ## 📊 Database Schema (Simplified)  
 ```
@@ -130,15 +73,16 @@ Devices (1) ───< Vitals (∞)
 ---
 
 ## 🔮 Future Enhancements  
-- Add real IoT medical devices  
+- Add real IoT medical devices
+- Cloud deployment (AWS – GCP – Azure)
 - ML-powered anomaly detection  
-- Cloud deployment (AWS – GCP – Azure)  
 - Predictive analytics & early warning system  
 
 ---
 
 ## 👥 Team  
-- Rawda Abokhalil  
+- Rawda Abokhalil
+- Rahma AbdElaleim
 - Youssef Ahmed  
 - Ahmed Youssef  
 - **Belal Ahmed**  
