@@ -33,7 +33,7 @@ It is a **full, scalable, fault-tolerant data engineering system** suitable for 
 | **Kafka Live Stream** | ![](images/kafka.png) |
 | **PostgreSQL Database** | ![](images/postgres.png) |
 | **Streamlit Dashboard – Main View** | ![](images/streamlit1.png) |
-| **Streamlit Dashboard – Alerts View** | ![](images/streamlit2.png) |
+| **Streamlit Dashboard** | ![](images/streamlit2.png) |
 
 ---
 
@@ -58,17 +58,6 @@ It is a **full, scalable, fault-tolerant data engineering system** suitable for 
 | Real-Time Analytics | Apache Spark (Structured Streaming) |
 | Storage | PostgreSQL |
 | Dashboard | Streamlit |
-
----
-
-
-## 📊 Database Schema (Simplified)  
-```
-Doctors (1) ───< Patients (∞)
-Patients (1) ───< Vitals (∞)
-Patients (1) ───< Alerts_Log (∞)
-Devices (1) ───< Vitals (∞)
-```
 
 ---
 
