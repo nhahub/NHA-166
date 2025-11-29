@@ -1,0 +1,9 @@
+ streamlit
+ pandas 
+ numpy
+ sqlalchemy
+ confluent-kafka
+ plotly
+ seaborn
+ matplotlib
+ psycopg2-binary
